@@ -1,0 +1,340 @@
+@media (max-width: 1439px) {
+  .container {
+    width: calc(100% - 305px);
+    padding:0 20px 0 24px;
+    box-sizing: border-box;
+  }
+  .services {
+    &__title{
+      &:before{
+        left: -24px;
+      }
+    }
+    &__list {
+      width: 100%;
+      grid-template-columns: 233px 215px 152px 233px 191px 95px;
+      margin-bottom: 32px;
+      &:hover {
+        cursor: grab;
+      }
+      &-item {
+        &:first-child {
+          grid-column-end: 2;
+        }
+        &:last-child {
+          padding-right: 50px;
+        }
+      }
+    }
+    &__text-block {
+      width: 43.3%;
+      margin-right: 6%;
+    }
+    &__descr {
+      max-height: 155px;
+    }
+    &__plate-img {
+      width: 50%;
+    }
+  }
+  .cards {
+    &__grid {
+      grid-template-columns: repeat(auto-fill, 240px);
+    }
+  }
+  .price {
+    &__table {
+      width: 100%;      
+      padding: 0 16px 0 16px;
+    }
+  }
+  .footer {
+    &__wrapper {
+      span {
+        max-width: 215px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+  .section-divider {
+    margin-left: 0;
+    width: 100%;
+  }
+  .sidemenu {
+    left: -100%;
+    visibility: hidden;    
+    z-index: 10;
+    .modal__overlay {
+      display: block;
+    }
+    .modal__close {
+      display: flex;
+    }
+    &__block {
+      position: relative;
+      width: 320px;
+      padding-top: 24px;
+      padding-right: 24px;
+      box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+    }
+  }
+  .menu {
+    &__wrapper {
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 88px;
+      padding: 18px 24px 18px 24px;
+      box-sizing:border-box;
+      display: grid;
+      grid-template-columns: 50px 1fr 116px;
+      // align-items: center;
+      border-bottom: 1px solid $active-color_light;
+    }
+    &__item {
+      display: flex;
+      position: relative;
+      justify-content: space-around;
+      align-items: center;
+      &:nth-child(2) {
+        justify-content: space-between;
+        margin: 0 20px 0 30px;
+      } 
+      &:not(:last-child):after {
+        display: block;
+        content: ' ';
+        position: absolute;
+        right: -16px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 32px;
+        width: 2px;
+        border-radius: 1px; 
+        background: #EAEAEA;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+  .services {
+    &__title {
+      margin-top: 70px;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .cards {
+    &__grid {
+      grid-template-columns: repeat(auto-fill, 224px);
+      column-gap: 24px;
+    }
+  }
+  .price {
+    &__header {
+      grid-template-columns: 370fr 96fr 101fr 119px;
+    }
+    &__service-card {      
+      grid-template-columns: 370fr 96fr 101fr 119px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section-divider {
+    margin-top: 24px;
+    padding-left: 24px;
+  }
+  .services {
+    &__text-block {
+      display: block;
+      width: 100%;
+    }
+    &__descr {
+      max-height: 94px;
+    }
+    &__plate-img {
+      margin-top: 16px;
+      margin-left: -24px;
+      width: calc(100% + 44px);
+    }
+  }
+  .cards {
+    &__grid {
+      grid-template-columns: 240px;
+      grid-auto-columns: 240px;
+      grid-auto-flow: column;
+      max-height: auto;
+      overflow: visible;
+      &-item {
+        &:last-child {
+          margin-right: 110%;
+        }
+        &_wide {
+          &:last-child {
+            margin-right: 70%;
+          }
+        }
+      }
+    }
+    .button__read-more {
+      display: none;
+    }
+  }
+  .price {
+    &__header {
+      display: none;
+    }
+    &__table {
+      background: $bg-color;
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: start;
+      grid-template-columns: 260px;
+      grid-auto-columns: 260px;
+      column-gap: 16px;
+      padding: 0;
+      max-height: 200px;
+      // overflow: hidden;
+    }
+    &__service-card {
+      position: relative;
+      display: flex;
+      flex-direction: column; 
+      justify-content: space-between;     
+      align-items: start;
+      height: 200px;
+      padding: 16px;
+      box-sizing: border-box;
+      background: #fff;      
+      border-radius: 6px;
+      span {
+        display: block;
+        color: $text-color_light;
+        margin-bottom: 4px;
+      }
+      button {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+      }
+      &:not(:last-child):after {
+        display: none;
+      }
+      &:last-child {
+        margin-right: 30%;
+      }
+    }
+    &__descr {
+      margin-top: 16px;
+    }
+  }
+  .footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    &__wrapper {
+      flex-direction: column;
+      align-items: center;
+      span {
+        text-align: center;
+        max-width: 100%;
+        padding-top: 16px;
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 574px) {
+  .menu {
+    .sidemenu {
+      &__contact {
+        display: none;
+      }
+      &__logo {
+        margin: 0;
+      }
+    }
+    &__wrapper {
+      padding: 18px 16px 18px 16px;
+    }
+    &__item {
+      &:nth-child(2) {
+        justify-content: start;
+        margin-left: 16px;
+      }
+      &:first-child:after {
+        display: none;
+      }
+    }
+  }
+  .price {
+    &__descr {
+      width: calc(100% - 32px);
+      height: 100%;
+    }
+  }
+  .modal {
+    &__block {
+      padding: 40px 16px 0 16px;
+    }
+    &__close {
+      top: 24px;
+      left: 16px;
+    }
+    &__title {
+      margin-top: 64px;
+      &:before {
+        left: -16px;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .sidemenu {
+      &__block {
+        padding-left: 16px;
+        width: 100%;
+      }
+      &__list {
+        list-style: none;
+        transform: translateX(-40px);
+        &-item {
+            &_active {
+                &:before {
+                    left: -16px;
+                }
+            }
+        }
+    }
+    }
+    .modal {
+      &__block {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-height: 726px) {
+  .sidemenu {
+    &__logo {
+      &-block {
+          margin-bottom: 22px;          
+      }
+    }
+    &__phone-number {
+      margin-bottom: 8px;
+  }
+  }
+}

@@ -1,0 +1,72 @@
+@import "fonts.scss";
+
+@import "./base/mixins";
+@import "./blocks/button"; 
+
+@import "./blocks/sidemenu";
+@import "./blocks/menu";
+@import "./blocks/services";
+@import "./blocks/cards";
+@import "./blocks/price";
+@import "./blocks/footer";
+@import "./blocks/modal";
+
+body {
+  max-height: 1925px;
+  font-family: "TT Lakes Regular", sans-serif;
+  color: $text-color;
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+  &:hover {
+    cursor: default;
+  }
+}
+
+.container {
+  position: relative;
+  width: 1087px;
+  // box-sizing: border-box;
+  padding:0 0 0 33px;
+  margin-left: 305px;
+}
+
+.section-divider {
+  box-sizing: border-box;
+  display: flex;
+  width: calc(100% - 305px);
+  min-height: 56px;
+  padding: 16px 0 16px 32px;
+  margin: 50px 0 24px 305px;
+  border-top: 1px solid $line-color;
+  background: linear-gradient(to right, $bg-color, $bg-color_light);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  color: $text-color_light
+}
+
+.swiper{
+  &-pagination {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: -8px;
+    &-bullet {
+      width: 12px;
+      height: 12px;
+      background: #DDDDDD;
+      &-active {
+        background: #B5B6BC;
+      }
+    }
+  }
+}
+
+@import "./blocks/media";
+
+.expansion {
+  max-height: 1000%;
+}

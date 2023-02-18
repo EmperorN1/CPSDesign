@@ -1,0 +1,18 @@
+.footer {
+  margin-top: 50px;
+  padding: 32px 0 21px 0;
+  border-top: 1px solid $line-color;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    span {
+      max-width: 330px;
+      font-size: 14px;
+      line-height: 16px;
+      color: $text-color_light;
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.price {
+  &__header {
+    display: grid;
+    grid-template-columns: 470fr 227fr 192fr 119px;
+    margin: 31px 16px 16px 16px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text-color_light;
+    opacity: 0.72;
+  }
+  &__table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background: $bg-color_light;
+    height: 324px;
+    width: 1056px;
+    padding: 0 24px 0 24px;
+    margin-bottom: 32px;
+    border-radius: 6px;
+  }
+  &__service-card {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 470fr 227fr 192fr 119px;
+    height: 64px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    &:not(:last-child):after {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #EAEAEA;
+    }
+    span {
+      display: none;
+    }
+  }
+  &__descr {
+    width: 421px;
+    height: 60px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+  }
+}

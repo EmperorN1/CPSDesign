@@ -1,0 +1,108 @@
+.button {
+    position: relative;
+    width: 40px;
+    height: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: $button-color;    
+    font-family: 'TT Lakes Regular';
+    &:hover {
+        cursor: pointer;
+    }
+    &__inner {
+        border: none;
+        img {
+            height: 20px;
+        }
+    }
+    &__hollow {
+        border: 2px solid $button-color;
+        background: $bg-color_light;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            translate: -50%;
+            rotate: (45deg);
+            width: 2px;
+            height: 8px;
+            border-radius: 1px;
+            background-color: $button-color;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            translate: -50%;
+            rotate: (-45deg);
+            width: 2px;
+            height: 8px;
+            border-radius: 1px;
+            background-color: $button-color;
+        }
+    }
+    &__read-more {
+        justify-content: space-between;
+        width: 132px;
+        height: 24px;
+        border: none;
+        border-radius: 0;
+        background: none;
+        font-weight: bold;  
+        font-size: 16px;
+        &_commercial {
+            width: auto;
+            height: auto;
+            display: block;
+            padding: 0;
+            text-align: left;
+            span {
+                height: 10px;
+            }
+        }
+    }
+    &__order {
+        width: 119px;
+        height: 32px;
+        justify-content: start;
+        padding-left: 12px;
+        border: none;
+        border-radius: 16px;
+        color: $bg-color_light;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 43%;
+            right: 15%;
+            translate: -50%;
+            rotate: (45deg);
+            width: 2px;
+            height: 8px;
+            border-radius: 1px;
+            background-color: $bg-color_light;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 30%;
+            right: 15%;
+            translate: -50%;
+            rotate: (-45deg);
+            width: 2px;
+            height: 8px;
+            border-radius: 1px;
+            background-color: $bg-color_light;
+        }
+    }
+}
