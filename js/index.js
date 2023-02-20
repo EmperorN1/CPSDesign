@@ -26,9 +26,17 @@ function closeAllModal(button) {
 }
 
 function extendContent(content, button) {
+  let textStorage = button.lastElementChild.innerHTML
     button.addEventListener('click', () => {
-      content.classList.add('expansion');
-      button.remove();
+      if (!content.classList.contains('expansion')) {
+        content.classList.add('expansion');
+        button.lastElementChild.textContent = "Скрыть";
+        button.firstElementChild.style.transform = 'rotate(-180deg)'
+      } else {
+        content.classList.remove('expansion');
+        button.lastElementChild.textContent = textStorage;
+        button.firstElementChild.style.transform = 'rotate(0deg)'
+      }
     })
 }
 

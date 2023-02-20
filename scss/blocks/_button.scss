@@ -48,14 +48,17 @@
         }
     }
     &__read-more {
-        justify-content: space-between;
-        width: 132px;
+        justify-content: start;
+        width: auto;
         height: 24px;
         border: none;
         border-radius: 0;
         background: none;
         font-weight: bold;  
         font-size: 16px;
+        img {
+            margin-right: 16px;
+        }
         &_commercial {
             width: auto;
             height: auto;
